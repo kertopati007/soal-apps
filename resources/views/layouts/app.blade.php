@@ -2,7 +2,6 @@
 
 <head>
     @include('partials.head')
-
 </head>
 
 <body class="boxed-size">

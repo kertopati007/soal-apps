@@ -14,12 +14,10 @@ return new class extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('author');
-            $table->string('category');
             $table->text('description')->nullable();
-            $table->date('published_date')->nullable();
-            $table->string('status')->default('available'); // available, checked_out, reserved
-
+            $table->enum('is_available', ['yes', 'no'])->default('yes');
+            $table->string('file_path')->nullable();
+            $table->string('file_name')->nullable();
             $table->timestamps();
         });
     }

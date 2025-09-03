@@ -17,9 +17,12 @@ class AuthController extends Controller
         $credentials = $request->only('username', 'password');
 
         if (auth()->attempt($credentials)) {
+            // Simpan role ke session setelah login berhasil
+            $user = auth()->user();
+            session(['role' => $user->role]);
+
             return redirect()->route('dashboard.index');
         }
-
 
         return back()->withErrors([
             'login' => 'Username or password is incorrect.',
@@ -28,6 +31,7 @@ class AuthController extends Controller
     public function logout()
     {
         auth()->logout();
+        session()->flush();
 
         return redirect()->route('login');
     }

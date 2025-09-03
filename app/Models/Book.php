@@ -10,10 +10,17 @@ class Book extends Model
     use \Illuminate\Database\Eloquent\Factories\HasFactory;
     protected $fillable = [
         'title',
-        'author',
-        'category',
         'description',
-        'published_date',
-        'status',
+        'is_available',
+        'file_path',
+        'file_name',
     ];
+
+    protected $casts = [
+        'is_available' => 'string',
+    ];
+    public function url(): string
+    {
+        return asset('storage/' . $this->path);
+    }
 }

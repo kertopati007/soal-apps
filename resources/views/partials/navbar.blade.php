@@ -21,50 +21,6 @@
                             <button class="btn btn-secondary border-0 p-0 position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="material-symbols-outlined">apps</span>
                             </button>
-                            <div class="dropdown-menu dropdown-lg p-0 border-0 py-4 px-3 max-h-312" data-simplebar>
-                                <div class="notification-menu d-flex flex-wrap justify-content-between gap-4">
-                                    <a href="https://www.figma.com/" target="_blank" class="dropdown-item p-0 text-center">
-                                        <img src="assets/images/figma.svg" class="wh-25" alt="united-states">
-                                        <span>Figma</span>
-                                    </a>
-                                    <a href="https://www.dribbble.com/" target="_blank" class="dropdown-item p-0 text-center">
-                                        <img src="assets/images/dribbble.svg" class="wh-25" alt="united-states">
-                                        <span>Dribbble</span>
-                                    </a>
-                                    <a href="https://www.spotify.com/" target="_blank" class="dropdown-item p-0 text-center">
-                                        <img src="assets/images/spotify.svg" class="wh-25" alt="united-states">
-                                        <span>Spotify</span>
-                                    </a>
-                                    <a href="https://www.github.com/" target="_blank" class="dropdown-item p-0 text-center">
-                                        <img src="assets/images/github.svg" class="wh-25" alt="united-states">
-                                        <span>Github</span>
-                                    </a>
-                                    <a href="https://www.google.com/drive/" target="_blank" class="dropdown-item p-0 text-center">
-                                        <img src="assets/images/gdrive.svg" class="wh-25" alt="united-states">
-                                        <span>GDrive</span>
-                                    </a>
-                                    <a href="https://www.trello.com/" target="_blank" class="dropdown-item p-0 text-center">
-                                        <img src="assets/images/trello.svg" class="wh-25" alt="united-states">
-                                        <span>Trello</span>
-                                    </a>
-                                    <a href="https://www.slak.com/" target="_blank" class="dropdown-item p-0 text-center">
-                                        <img src="assets/images/slak.svg" class="wh-25" alt="united-states">
-                                        <span>Slak</span>
-                                    </a>
-                                    <a href="https://www.pinterest.com/" target="_blank" class="dropdown-item p-0 text-center">
-                                        <img src="assets/images/pinterest.svg" class="wh-25" alt="united-states">
-                                        <span>Pinterest</span>
-                                    </a>
-                                    <a href="https://www.facebook.com/" target="_blank" class="dropdown-item p-0 text-center">
-                                        <img src="assets/images/facebook.svg" class="wh-25" alt="united-states">
-                                        <span>Facebook</span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/" target="_blank" class="dropdown-item p-0 text-center">
-                                        <img src="assets/images/linkedin.svg" class="wh-25" alt="united-states">
-                                        <span>Linkedin</span>
-                                    </a>
-                                </div>
-                            </div>
                         </div>
                     </li>
                 </ul>
@@ -87,71 +43,6 @@
                             <button class="btn btn-secondary dropdown-toggle border-0 p-0 position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="material-symbols-outlined">translate</span>
                             </button>
-                            <div class="dropdown-menu dropdown-lg p-0 border-0 dropdown-menu-end">
-                                <span class="fw-semibold fs-15 text-secondary title">Choose Language</span>
-                                <div class="max-h-275" data-simplebar>
-                                    <div class="notification-menu">
-                                        <a href="javascript:void(0);" class="dropdown-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <img src="assets/images/usa.svg" class="wh-30 rounded-circle" alt="united-states">
-                                                </div>
-                                                <div class="flex-grow-1 ms-2">
-                                                    <span class="text-secondary fw-medium fs-14">English</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="notification-menu">
-                                        <a href="javascript:void(0);" class="dropdown-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <img src="assets/images/canada.svg" class="wh-30 rounded-circle" alt="spain">
-                                                </div>
-                                                <div class="flex-grow-1 ms-2">
-                                                    <span class="text-secondary fw-medium fs-14">Canada</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="notification-menu">
-                                        <a href="javascript:void(0);" class="dropdown-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <img src="assets/images/germany.svg" class="wh-30 rounded-circle" alt="spain">
-                                                </div>
-                                                <div class="flex-grow-1 ms-2">
-                                                    <span class="text-secondary fw-medium fs-14">Germany</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="notification-menu">
-                                        <a href="javascript:void(0);" class="dropdown-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <img src="assets/images/portugal.svg" class="wh-30 rounded-circle" alt="portugal">
-                                                </div>
-                                                <div class="flex-grow-1 ms-2">
-                                                    <span class="text-secondary fw-medium fs-14">Portugal</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="notification-menu mb-0">
-                                        <a href="javascript:void(0);" class="dropdown-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <img src="assets/images/spain.svg" class="wh-30 rounded-circle" alt="spain">
-                                                </div>
-                                                <div class="flex-grow-1 ms-2">
-                                                    <span class="text-secondary fw-medium fs-14">Spain</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </li>
                     <li class="header-right-item">
@@ -261,7 +152,7 @@
                         <div class="dropdown admin-profile">
                             <div class="d-xxl-flex align-items-center bg-transparent border-0 text-start p-0 cursor dropdown-toggle" data-bs-toggle="dropdown">
                                 <div class="flex-shrink-0">
-                                    <img class="rounded-circle wh-40 administrator" src="assets/images/administrator.jpg" alt="admin">
+                                    <img class="rounded-circle wh-40 administrator" src={{asset("assets/images/administrator.jpg")}} alt="admin">
                                 </div>
                                 <div class="flex-grow-1 ms-2">
                                     <div class="d-flex align-items-center justify-content-between">
@@ -277,7 +168,7 @@
                             <div class="dropdown-menu border-0 bg-white dropdown-menu-end">
                                 <div class="d-flex align-items-center info">
                                     <div class="flex-shrink-0">
-                                        <img class="rounded-circle wh-30 administrator" src="assets/images/administrator.jpg" alt="admin">
+                                        <img class="rounded-circle wh-30 administrator" src={{asset("assets/images/administrator.jpg")}} alt="admin">
                                     </div>
                                     <div class="flex-grow-1 ms-2">
                                         <h3 class="fw-medium">Olivia John</h3>

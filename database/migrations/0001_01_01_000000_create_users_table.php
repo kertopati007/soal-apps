@@ -16,7 +16,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('username')->unique();
             $table->string('password');
-            $table->string('role')->default('user'); // user, admin, librarian
+            $table->enum(
+                'role',
+                ['user', 'admin', 'librarian']
+            )->default('user');
             $table->rememberToken();
             $table->timestamps();
         });

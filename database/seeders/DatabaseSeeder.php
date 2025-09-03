@@ -35,12 +35,12 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Book::create([
-            'title' => 'Sample Book',
-            'author' => 'John Doe',
-            'category' => 'Fiction',
-            'description' => 'This is a sample book description.',
-            'published_date' => now(),
-            'status' => 'available',
+            'title' => 'The Great Gatsby',
+            'author' => 'F. Scott Fitzgerald',
+            'description' => 'A novel set in the Jazz Age that tells the story of Jay Gatsby and his unrequited love for Daisy Buchanan.',
+            'is_available' => 'yes',
+            'file_path' => null,
+            'file_name' => null,
         ]);
     }
 }
