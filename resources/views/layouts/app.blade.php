@@ -18,7 +18,8 @@
 
     @include('partials.footer')
     </div>
-
+    @yield('modals')
+    @yield('scripts')
     @include('partials.script')
 </body>
 

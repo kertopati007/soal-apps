@@ -12,7 +12,7 @@
             <div class="m-auto m-1230">
                 <div class="row align-items-center">
                     <div class="col-lg-6 d-none d-lg-block">
-                        <img src="assets/images/login.jpg" class="rounded-3" alt="login">
+                        <img src="assets/images/logoBB.png" class="rounded-3" alt="login">
                     </div>
                     <div class="col-lg-6">
                         <div class="mw-480 ms-lg-auto">

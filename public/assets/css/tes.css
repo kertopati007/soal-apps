@@ -1,0 +1,71 @@
+/* ====== Bootstrap-friendly Color Theme ====== */
+:root{
+  --bd-bg: #f5f7fb;
+  --bd-header1: #4f46e5;        /* indigo */
+  --bd-header2: #22d3ee;        /* cyan */
+  --bd-shadow: 0 10px 20px rgba(2,8,23,.08);
+  --bd-table-stripe:#f1f5f9;
+  --bd-table-hover:#e0f2fe;
+  --bd-sidebar1:#0f172a;
+  --bd-sidebar2:#1e293b;
+}
+
+body{ background:var(--bd-bg); }
+
+/* Header / Breadcrumb */
+.bd-breadcrumb{
+  background:linear-gradient(135deg,var(--bd-header1),var(--bd-header2));
+  color:#fff; border-radius:14px; padding:14px 18px; box-shadow:var(--bd-shadow);
+}
+.bd-breadcrumb a{ color:#fff; opacity:.9; text-decoration:none; }
+.bd-breadcrumb a:hover{ opacity:1; text-decoration:underline; }
+
+/* Sidebar (opsional, jika punya panel kiri) */
+.bd-sidebar{
+  background:linear-gradient(180deg,var(--bd-sidebar1),var(--bd-sidebar2));
+  min-height:100vh; color:#cbd5e1;
+}
+.bd-sidebar .nav-link{
+  color:#cbd5e1; border-radius:10px; margin:.25rem .5rem; padding:.5rem .75rem;
+}
+.bd-sidebar .nav-link:hover,
+.bd-sidebar .nav-link.active{ background:#1f2937; color:#fff; }
+
+/* Card */
+.card.bd-card{ border-radius:16px; box-shadow:var(--bd-shadow); }
+
+/* “Tambah User” button = gradient tapi tetap btn Bootstrap */
+.btn-gradient{
+  color:#fff; border:0;
+  background:linear-gradient(135deg,#4f46e5,#22d3ee);
+  box-shadow:0 6px 12px rgba(79,70,229,.25);
+}
+.btn-gradient:hover{ filter:brightness(1.05); color:#fff; }
+
+/* Table */
+.table.bd-table{
+  border-radius:14px; overflow:hidden; box-shadow:var(--bd-shadow);
+}
+.table.bd-table thead th{
+  background:linear-gradient(180deg,#f8fafc,#eef2ff);
+  color:#111827; border-bottom:1px solid #e5e7eb !important;
+}
+.table.bd-table tbody tr:nth-child(odd){ background:var(--bd-table-stripe); }
+.table.bd-table tbody tr:hover{ background:var(--bd-table-hover); }
+
+/* Action buttons kecil (tetap pakai utilitas Bootstrap) */
+.btn-icon{ padding:.375rem .6rem; border-radius:.6rem; font-weight:600; }
+
+/* Badge role */
+.badge-role{ font-weight:700; }
+.badge-admin{     background:#eef2ff; color:#3730a3; }
+.badge-librarian{ background:#ecfeff; color:#155e75; }
+.badge-user{      background:#ecfccb; color:#3f6212; }
+
+/* Dark mode (opsional) */
+@media (prefers-color-scheme: dark){
+  :root{ --bd-bg:#0b1220; --bd-table-stripe:#0b1629; --bd-table-hover:#0b2a42; }
+  .bd-breadcrumb{ color:#fff; }
+  .card.bd-card{ border-color:#1f2937; }
+  .table.bd-table thead th{ background:linear-gradient(180deg,#0b1629,#111827); color:#e5e7eb; }
+}

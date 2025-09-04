@@ -1,4 +1,4 @@
-        <div class="sidebar-area" id="sidebar-area">
+        <div class="sidebar-area --bs-grey-10" id="sidebar-area">
             <div class="logo position-relative">
                 <a href="{{ route('dashboard.index')}}" class="d-block text-decoration-none position-relative">
                     <img src={{asset("assets/images/logoBB.png")}} style="width:150px;" alt="logo-icon">
@@ -35,7 +35,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="{{ route('setting')}}" class="menu-link">
+                        <a href="{{ route('user.index')}}" class="menu-link">
                             <span class="material-symbols-outlined menu-icon">person</span>
                             <span class="title">Setting Profile</span>
                         </a>

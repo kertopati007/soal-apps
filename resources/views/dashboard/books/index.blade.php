@@ -55,20 +55,26 @@
                                     @if($book->is_available === 'yes')
                                     <span class="badge bg-success">Aktif</span>
                                     @else
-                                    <span class="badge bg-danger">Aktif</span>
+                                    <span class="badge bg-danger">Tidak Aktif</span>
                                     @endif
                                 </td>
                                 <td>
                                     @if(session('role') === 'admin')
-                                    <a href="{{ route('books.download', $book) }}" class="btn btn-sm btn-info" target="_blank">Unduh</a>
-                                    <a href="{{ route('books.edit', $book->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                    <a href="{{ route('books.download', $book->id) }}" class="btn btn-sm btn-info{{ $book->is_available === 'no' ? ' disabled' : '' }}" target="_blank" {{ $book->is_available === 'no' ? 'tabindex="-1" aria-disabled="true"' : '' }}><i class="ri-download-fill"></i>Unduh</a>
+                                    <!-- <a href="{{ asset('storage/' . $book->file_path) }}" class="btn btn-sm btn-success" target="_blank">
+                                        <i class="ri-eye-fill"></i>
+                                        Lihat</a> -->
+
+                                    <a href="{{ route('books.edit', $book->id) }}" class="btn btn-sm btn-warning"><i class="ri-pencil-fill"></i>Edit</a>
+
                                     <form action="{{ route('books.destroy', $book->id) }}" method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this book?')">Hapus</button>
+                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this book?')"><i class="ri-delete-bin-line"></i>Hapus</button>
                                     </form>
                                     @else
-                                    <a href="{{ asset('storage/' . $book->file_path) }}" class="btn btn-sm btn-info" target="_blank">Unduh</a>
+                                    <!-- <a href="{{ asset('storage/' . $book->file_path) }}" class="btn btn-sm btn-success-70" target="_blank"><i class="ri-eye-fill"></i>Lihat</a> -->
+                                    <a href="{{ route('books.download', $book->id) }}" class="btn btn-sm btn-info{{ $book->is_available === 'no' ? ' disabled' : '' }}" target="_blank" {{ $book->is_available === 'no' ? 'tabindex="-1" aria-disabled="true"' : '' }}> <i class="ri-download-fill"></i>Unduh</a>
                                     @endif
                                 </td>
                             </tr>
