@@ -21,15 +21,18 @@
     <div class="card bg-white border-0 rounded-3 mb-4">
         <div class="card-body p-4">
             <div class="d-flex justify-content-between align-items-center mb-3">
-                @if(session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-                @endif
+
+
                 @if(session('role') === 'admin')
                 <a href="{{ route('books.create') }}" class="btn btn-primary">Tambah Dokumen</a>
                 @endif
             </div>
+            @if(session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
             <div class="default-table-area all-products">
                 <div class="table-responsive">
                     <table class="table align-middle table-hover mb-0">

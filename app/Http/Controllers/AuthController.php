@@ -20,6 +20,8 @@ class AuthController extends Controller
             // Simpan role ke session setelah login berhasil
             $user = auth()->user();
             session(['role' => $user->role]);
+            session(['username' => $user->username]);
+
 
             return redirect()->route('dashboard.index');
         }

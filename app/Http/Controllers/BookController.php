@@ -48,8 +48,8 @@ class BookController extends Controller
     }
     public function edit($id)
     {
-        $book = Book::findOrFail($id);
-        return view('dashboard.books.form', compact('book'));
+        $books = Book::where('id', $id)->first();
+        return view('dashboard.books.form', ['book' => $books]);
     }
     public function update(StoreDocumentRequest $request, $id)
     {
