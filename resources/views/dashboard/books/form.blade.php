@@ -27,14 +27,14 @@
                 @endif
                 <div class="mb-3">
                     <label for="title" class="form-label">Judul</label>
-                    <input type="text" class="form-control" id="title" name="title" value="{{ old('title',$book->title )}}" required>
+                    <input type="text" class="form-control" id="title" name="title" value="{{ isset($book) ? old('title', $book->title)  : ''}}" required>
                     @error('title')
                     <div class="text-danger mt-2">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Deskripsi</label>
-                    <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                    <textarea class="form-control" id="description" name="description" rows="3" required>{{ isset($book) ? old('description', $book->description) : old('description') }}</textarea>
                     @error('description')
                     <div class="text-danger mt-2">{{ $message }}</div>
                     @enderror
@@ -42,7 +42,14 @@
 
                 <div class="mb-3">
                     <label for="file" class="form-label">File</label>
+                    @if(isset($book) && $book->file_name)
+                    <div class="mb-2">
+                        <a href="{{ asset('storage/' . $book->file_path) }}" target="_blank">{{ $book->file_name }}</a>
+                    </div>
+                    <input type="file" class="form-control" id="file" name="file" accept="application/pdf">
+                    @else
                     <input type="file" class="form-control" id="file" name="file" accept="application/pdf" required>
+                    @endif
                     @error('file')
                     <div class="text-danger mt-2">{{ $message }}</div>
                     @enderror

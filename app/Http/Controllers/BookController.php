@@ -95,24 +95,18 @@ class BookController extends Controller
 
         return redirect()->route('books.index')->with('success', 'Buku berhasil dihapus.');
     }
-    public function download(Book $document)
+    public function download($id)
     {
-        dd($document);
-        // if (empty($document->path) || !is_string($document->path)) {
-        //     abort(404, 'Path file kosong / tidak valid.');
-        // }
 
-        // if (!Storage::disk('public')->exists($document->path)) {
-        //     abort(404, 'File tidak ditemukan pada storage.');
-        // }
+        $book = Book::where('id', $id)->first();
+        $path = $book->file_path;
 
-        // // Nama file yang rapi
-        // $filename = Str::slug($document->name ?: pathinfo($document->path, PATHINFO_FILENAME)) . '.pdf';
+        $disk = Storage::disk('public');
 
-        // return Storage::disk('public')->download(
-        //     $document->path,
-        //     $filename,
-        //     ['Content-Type' => 'application/pdf']
-        // );
+        if (!$disk->exists($path)) {
+            abort(404, 'File tidak ditemukan.');
+        }
+        $baseName = $book->file_name;
+        return $disk->download($path, $baseName);
     }
 }
